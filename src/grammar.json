@@ -13,7 +13,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_comment"
+          "name": "comment"
         },
         {
           "type": "SYMBOL",
@@ -387,7 +387,7 @@
       "type": "PATTERN",
       "value": "\\d+"
     },
-    "_comment": {
+    "comment": {
       "type": "PATTERN",
       "value": "\\/\\/.*\\n"
     }

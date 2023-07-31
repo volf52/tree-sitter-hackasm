@@ -2,7 +2,7 @@ module.exports = grammar({
   name: 'hackasm',
   rules: {
     source_file: ($) => repeat($._line),
-    _line: ($) => choice($._comment, $.label_def, $._instruction),
+    _line: ($) => choice($.comment, $.label_def, $._instruction),
     label_def: ($) => seq('(', $.label_ident, ')'),
     _instruction: ($) => choice($.a_inst, $.c_inst),
     a_inst: ($) => seq('@', $.label_ident),
@@ -69,6 +69,6 @@ module.exports = grammar({
 
     _alpha: ($) => /[a-zA-Z]+/,
     _numeric: ($) => /\d+/,
-    _comment: ($) => /\/\/.*\n/,
+    comment: ($) => /\/\/.*\n/,
   },
 });

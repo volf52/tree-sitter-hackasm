@@ -76,7 +76,7 @@ enum {
   anon_sym_M_PIPED = 57,
   sym__alpha = 58,
   sym__numeric = 59,
-  sym__comment = 60,
+  sym_comment = 60,
   sym_source_file = 61,
   sym__line = 62,
   sym_label_def = 63,
@@ -153,7 +153,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_M_PIPED] = "M|D",
   [sym__alpha] = "_alpha",
   [sym__numeric] = "_numeric",
-  [sym__comment] = "_comment",
+  [sym_comment] = "comment",
   [sym_source_file] = "source_file",
   [sym__line] = "_line",
   [sym_label_def] = "label_def",
@@ -230,7 +230,7 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_M_PIPED] = anon_sym_M_PIPED,
   [sym__alpha] = sym__alpha,
   [sym__numeric] = sym__numeric,
-  [sym__comment] = sym__comment,
+  [sym_comment] = sym_comment,
   [sym_source_file] = sym_source_file,
   [sym__line] = sym__line,
   [sym_label_def] = sym_label_def,
@@ -487,8 +487,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = true,
   },
-  [sym__comment] = {
-    .visible = false,
+  [sym_comment] = {
+    .visible = true,
     .named = true,
   },
   [sym_source_file] = {
@@ -943,7 +943,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(87);
       END_STATE();
     case 88:
-      ACCEPT_TOKEN(sym__comment);
+      ACCEPT_TOKEN(sym_comment);
       END_STATE();
     default:
       return false;
@@ -1037,7 +1037,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(1),
     [anon_sym_D_PIPEM] = ACTIONS(1),
     [anon_sym_M_PIPED] = ACTIONS(1),
-    [sym__comment] = ACTIONS(1),
+    [sym_comment] = ACTIONS(1),
   },
   [1] = {
     [sym_source_file] = STATE(20),
@@ -1099,7 +1099,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(15),
     [anon_sym_D_PIPEM] = ACTIONS(15),
     [anon_sym_M_PIPED] = ACTIONS(15),
-    [sym__comment] = ACTIONS(17),
+    [sym_comment] = ACTIONS(17),
   },
   [2] = {
     [sym__line] = STATE(2),
@@ -1160,7 +1160,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(36),
     [anon_sym_D_PIPEM] = ACTIONS(36),
     [anon_sym_M_PIPED] = ACTIONS(36),
-    [sym__comment] = ACTIONS(39),
+    [sym_comment] = ACTIONS(39),
   },
   [3] = {
     [sym__line] = STATE(2),
@@ -1221,7 +1221,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(15),
     [anon_sym_D_PIPEM] = ACTIONS(15),
     [anon_sym_M_PIPED] = ACTIONS(15),
-    [sym__comment] = ACTIONS(44),
+    [sym_comment] = ACTIONS(44),
   },
   [4] = {
     [sym__jump_def] = STATE(10),
@@ -1275,7 +1275,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(46),
     [anon_sym_D_PIPEM] = ACTIONS(46),
     [anon_sym_M_PIPED] = ACTIONS(46),
-    [sym__comment] = ACTIONS(46),
+    [sym_comment] = ACTIONS(46),
   },
   [5] = {
     [sym__jump_def] = STATE(12),
@@ -1329,7 +1329,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(52),
     [anon_sym_D_PIPEM] = ACTIONS(52),
     [anon_sym_M_PIPED] = ACTIONS(52),
-    [sym__comment] = ACTIONS(52),
+    [sym_comment] = ACTIONS(52),
   },
   [6] = {
     [ts_builtin_sym_end] = ACTIONS(56),
@@ -1383,7 +1383,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(56),
     [anon_sym_D_PIPEM] = ACTIONS(56),
     [anon_sym_M_PIPED] = ACTIONS(56),
-    [sym__comment] = ACTIONS(56),
+    [sym_comment] = ACTIONS(56),
   },
   [7] = {
     [ts_builtin_sym_end] = ACTIONS(62),
@@ -1436,7 +1436,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(62),
     [anon_sym_D_PIPEM] = ACTIONS(62),
     [anon_sym_M_PIPED] = ACTIONS(62),
-    [sym__comment] = ACTIONS(62),
+    [sym_comment] = ACTIONS(62),
   },
   [8] = {
     [ts_builtin_sym_end] = ACTIONS(56),
@@ -1489,7 +1489,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(56),
     [anon_sym_D_PIPEM] = ACTIONS(56),
     [anon_sym_M_PIPED] = ACTIONS(56),
-    [sym__comment] = ACTIONS(56),
+    [sym_comment] = ACTIONS(56),
   },
   [9] = {
     [ts_builtin_sym_end] = ACTIONS(66),
@@ -1541,7 +1541,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(66),
     [anon_sym_D_PIPEM] = ACTIONS(66),
     [anon_sym_M_PIPED] = ACTIONS(66),
-    [sym__comment] = ACTIONS(66),
+    [sym_comment] = ACTIONS(66),
   },
   [10] = {
     [ts_builtin_sym_end] = ACTIONS(52),
@@ -1593,7 +1593,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(52),
     [anon_sym_D_PIPEM] = ACTIONS(52),
     [anon_sym_M_PIPED] = ACTIONS(52),
-    [sym__comment] = ACTIONS(52),
+    [sym_comment] = ACTIONS(52),
   },
   [11] = {
     [ts_builtin_sym_end] = ACTIONS(70),
@@ -1645,7 +1645,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(70),
     [anon_sym_D_PIPEM] = ACTIONS(70),
     [anon_sym_M_PIPED] = ACTIONS(70),
-    [sym__comment] = ACTIONS(70),
+    [sym_comment] = ACTIONS(70),
   },
   [12] = {
     [ts_builtin_sym_end] = ACTIONS(74),
@@ -1697,7 +1697,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(74),
     [anon_sym_D_PIPEM] = ACTIONS(74),
     [anon_sym_M_PIPED] = ACTIONS(74),
-    [sym__comment] = ACTIONS(74),
+    [sym_comment] = ACTIONS(74),
   },
   [13] = {
     [ts_builtin_sym_end] = ACTIONS(78),
@@ -1749,7 +1749,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(78),
     [anon_sym_D_PIPEM] = ACTIONS(78),
     [anon_sym_M_PIPED] = ACTIONS(78),
-    [sym__comment] = ACTIONS(78),
+    [sym_comment] = ACTIONS(78),
   },
   [14] = {
     [ts_builtin_sym_end] = ACTIONS(82),
@@ -1801,7 +1801,7 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_A_PIPED] = ACTIONS(82),
     [anon_sym_D_PIPEM] = ACTIONS(82),
     [anon_sym_M_PIPED] = ACTIONS(82),
-    [sym__comment] = ACTIONS(82),
+    [sym_comment] = ACTIONS(82),
   },
 };
 

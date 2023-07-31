@@ -89,6 +89,10 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "label_def",
           "named": true
         }
@@ -322,5 +326,9 @@
   {
     "type": "M|D",
     "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
   }
 ]

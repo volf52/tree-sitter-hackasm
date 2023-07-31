@@ -1,4 +1,5 @@
 (label_ident) @constant
+(comment) @comment
 
 [
  (dest)
