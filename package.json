@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-hackasm",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "bindings/node",
   "author": "Arslan<rslnkrmt2552@gmail.com>",
   "license": "MIT",
@@ -17,10 +17,7 @@
   "tree-sitter": [
     {
       "scope": "source.haskasm",
-      "file-types": [
-        "hasm",
-        "hackasm"
-      ],
+      "file-types": ["hasm", "hackasm"],
       "highlights": "queries/highlights.scm"
     }
   ]
