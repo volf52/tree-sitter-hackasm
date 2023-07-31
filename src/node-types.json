@@ -15,23 +15,42 @@
     }
   },
   {
-    "type": "instruction",
+    "type": "c_inst",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "a_inst",
+          "type": "comp",
           "named": true
         },
         {
-          "type": "c_inst",
+          "type": "dest",
+          "named": true
+        },
+        {
+          "type": "jump",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "comp",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "dest",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "jump",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "label_def",
@@ -49,6 +68,11 @@
     }
   },
   {
+    "type": "label_ident",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -57,7 +81,11 @@
       "required": false,
       "types": [
         {
-          "type": "instruction",
+          "type": "a_inst",
+          "named": true
+        },
+        {
+          "type": "c_inst",
           "named": true
         },
         {
@@ -68,6 +96,18 @@
     }
   },
   {
+    "type": "!A",
+    "named": false
+  },
+  {
+    "type": "!D",
+    "named": false
+  },
+  {
+    "type": "!M",
+    "named": false
+  },
+  {
     "type": "(",
     "named": false
   },
@@ -76,15 +116,211 @@
     "named": false
   },
   {
+    "type": "-1",
+    "named": false
+  },
+  {
+    "type": "-A",
+    "named": false
+  },
+  {
+    "type": "-D",
+    "named": false
+  },
+  {
+    "type": "-M",
+    "named": false
+  },
+  {
+    "type": "0",
+    "named": false
+  },
+  {
+    "type": "1",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
     "type": "@",
     "named": false
   },
   {
-    "type": "c_inst",
-    "named": true
+    "type": "A",
+    "named": false
   },
   {
-    "type": "label_ident",
-    "named": true
+    "type": "A&D",
+    "named": false
+  },
+  {
+    "type": "A+1",
+    "named": false
+  },
+  {
+    "type": "A+D",
+    "named": false
+  },
+  {
+    "type": "A-1",
+    "named": false
+  },
+  {
+    "type": "A-D",
+    "named": false
+  },
+  {
+    "type": "AD",
+    "named": false
+  },
+  {
+    "type": "ADM",
+    "named": false
+  },
+  {
+    "type": "AM",
+    "named": false
+  },
+  {
+    "type": "AMD",
+    "named": false
+  },
+  {
+    "type": "A|D",
+    "named": false
+  },
+  {
+    "type": "D",
+    "named": false
+  },
+  {
+    "type": "D&A",
+    "named": false
+  },
+  {
+    "type": "D&M",
+    "named": false
+  },
+  {
+    "type": "D+1",
+    "named": false
+  },
+  {
+    "type": "D+A",
+    "named": false
+  },
+  {
+    "type": "D+M",
+    "named": false
+  },
+  {
+    "type": "D-1",
+    "named": false
+  },
+  {
+    "type": "D-A",
+    "named": false
+  },
+  {
+    "type": "D-M",
+    "named": false
+  },
+  {
+    "type": "DA",
+    "named": false
+  },
+  {
+    "type": "DAM",
+    "named": false
+  },
+  {
+    "type": "DM",
+    "named": false
+  },
+  {
+    "type": "DMA",
+    "named": false
+  },
+  {
+    "type": "D|A",
+    "named": false
+  },
+  {
+    "type": "D|M",
+    "named": false
+  },
+  {
+    "type": "JEQ",
+    "named": false
+  },
+  {
+    "type": "JGE",
+    "named": false
+  },
+  {
+    "type": "JGT",
+    "named": false
+  },
+  {
+    "type": "JLE",
+    "named": false
+  },
+  {
+    "type": "JMP",
+    "named": false
+  },
+  {
+    "type": "JNE",
+    "named": false
+  },
+  {
+    "type": "M",
+    "named": false
+  },
+  {
+    "type": "M&D",
+    "named": false
+  },
+  {
+    "type": "M+1",
+    "named": false
+  },
+  {
+    "type": "M+D",
+    "named": false
+  },
+  {
+    "type": "M-1",
+    "named": false
+  },
+  {
+    "type": "M-D",
+    "named": false
+  },
+  {
+    "type": "MA",
+    "named": false
+  },
+  {
+    "type": "MAD",
+    "named": false
+  },
+  {
+    "type": "MD",
+    "named": false
+  },
+  {
+    "type": "MDA",
+    "named": false
+  },
+  {
+    "type": "M|D",
+    "named": false
   }
 ]
