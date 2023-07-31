@@ -18,7 +18,8 @@
     {
       "scope": "source.haskasm",
       "file-types": [
-        "hasm"
+        "hasm",
+        "hackasm"
       ],
       "highlights": "queries/highlights.scm"
     }
