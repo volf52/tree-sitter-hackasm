@@ -1,0 +1,13 @@
+{
+  "name": "tree-sitter-hackasm",
+  "version": "1.0.0",
+  "main": "bindings/node",
+  "author": "Arslan<rslnkrmt2552@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  }
+}
