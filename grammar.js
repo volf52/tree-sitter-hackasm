@@ -1,3 +1,10 @@
+const { buildPermutations } = require('./utils');
+
+const REGISTERS = ['A', 'M', 'D'];
+const JUMP_COMMANDS = ['JMP', 'JEQ', 'JLE', 'JGT', 'JGE', 'JLE', 'JNE'];
+
+const DEST_CHOICES = buildPermutations(REGISTERS.join(''));
+
 module.exports = grammar({
   name: 'hackasm',
   rules: {
@@ -10,25 +17,8 @@ module.exports = grammar({
     label_ident: ($) => choice($._alpha, $._numeric),
     _dest_def: ($) => seq($.dest, '='),
     _jump_def: ($) => seq(';', $.jump),
-    jump: ($) => choice('JMP', 'JEQ', 'JLE', 'JGT', 'JGE', 'JLE', 'JNE'),
-    dest: ($) =>
-      choice(
-        'A',
-        'D',
-        'M',
-        'MD',
-        'DM',
-        'AM',
-        'MA',
-        'AD',
-        'DA',
-        'DMA',
-        'DAM',
-        'ADM',
-        'MAD',
-        'MDA',
-        'AMD',
-      ),
+    jump: ($) => choice(...JUMP_COMMANDS),
+    dest: ($) => choice(...DEST_CHOICES),
     comp: ($) =>
       choice(
         '0',

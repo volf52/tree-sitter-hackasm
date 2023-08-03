@@ -182,19 +182,11 @@
         },
         {
           "type": "STRING",
-          "value": "D"
-        },
-        {
-          "type": "STRING",
           "value": "M"
         },
         {
           "type": "STRING",
-          "value": "MD"
-        },
-        {
-          "type": "STRING",
-          "value": "DM"
+          "value": "D"
         },
         {
           "type": "STRING",
@@ -202,11 +194,15 @@
         },
         {
           "type": "STRING",
+          "value": "AD"
+        },
+        {
+          "type": "STRING",
           "value": "MA"
         },
         {
           "type": "STRING",
-          "value": "AD"
+          "value": "MD"
         },
         {
           "type": "STRING",
@@ -214,11 +210,11 @@
         },
         {
           "type": "STRING",
-          "value": "DMA"
+          "value": "DM"
         },
         {
           "type": "STRING",
-          "value": "DAM"
+          "value": "AMD"
         },
         {
           "type": "STRING",
@@ -234,7 +230,11 @@
         },
         {
           "type": "STRING",
-          "value": "AMD"
+          "value": "DAM"
+        },
+        {
+          "type": "STRING",
+          "value": "DMA"
         }
       ]
     },

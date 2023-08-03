@@ -1,3 +1,4 @@
 *.wasm
 .github
-testfile
+tsconfig.json
+target
