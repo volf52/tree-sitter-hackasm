@@ -276,6 +276,10 @@
     "named": false
   },
   {
+    "type": "JLT",
+    "named": false
+  },
+  {
     "type": "JMP",
     "named": false
   },

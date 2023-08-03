@@ -1,7 +1,7 @@
 const { buildPermutations } = require('./utils');
 
 const REGISTERS = ['A', 'M', 'D'];
-const JUMP_COMMANDS = ['JMP', 'JEQ', 'JLE', 'JGT', 'JGE', 'JLE', 'JNE'];
+const JUMP_COMMANDS = ['JMP', 'JEQ', 'JLT', 'JGT', 'JGE', 'JLE', 'JNE'];
 
 const DEST_CHOICES = buildPermutations(REGISTERS.join(''));
 
