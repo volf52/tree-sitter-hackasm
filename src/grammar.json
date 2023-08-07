@@ -69,10 +69,6 @@
         {
           "type": "SYMBOL",
           "name": "label_ident"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_newline"
         }
       ]
     },
@@ -106,10 +102,6 @@
               "type": "BLANK"
             }
           ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_newline"
         }
       ]
     },
@@ -406,8 +398,8 @@
   },
   "extras": [
     {
-      "type": "STRING",
-      "value": " "
+      "type": "PATTERN",
+      "value": "\\s"
     }
   ],
   "conflicts": [],
