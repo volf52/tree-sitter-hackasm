@@ -25,6 +25,10 @@
         }
       ]
     },
+    "_newline": {
+      "type": "PATTERN",
+      "value": "\\r?\\n|\\r"
+    },
     "label_def": {
       "type": "SEQ",
       "members": [
@@ -65,6 +69,10 @@
         {
           "type": "SYMBOL",
           "name": "label_ident"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_newline"
         }
       ]
     },
@@ -98,6 +106,10 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_newline"
         }
       ]
     },
@@ -394,8 +406,8 @@
   },
   "extras": [
     {
-      "type": "PATTERN",
-      "value": "\\s"
+      "type": "STRING",
+      "value": " "
     }
   ],
   "conflicts": [],
